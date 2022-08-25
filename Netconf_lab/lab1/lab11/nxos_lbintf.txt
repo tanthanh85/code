@@ -1,0 +1,40 @@
+module: Cisco-NX-OS-device
+  +--rw System
+     +--rw intf-items
+        +--rw lb-items
+           +--rw LbRtdIf-list* [id]
+              +--rw linkLog?                       l1_LinkLog
+              +--rw name?                          naming_Name256
+              +--rw descr?                         naming_Descr1024
+              +--rw id                             nw_IfId
+              +--rw adminSt?                       l1_AdminSt
+              +--rw vrf-items
+              |  +--ro name?   l3_VrfName
+              +--rw lbrtdif-items
+              |  +--ro ifIndex?        uint32
+              |  +--ro iod?            uint64
+              |  +--ro operSt?         l1_OperSt
+              |  +--ro operMtu?        l1_Mtu
+              |  +--ro operDescr?      ethpm_operDescr
+              |  +--ro operStQual?     l1_OperStQual
+              |  +--ro currErrIndex?   uint32
+              |  +--ro lastErrors?     ethpm_LastErrorsList
+              |  +--ro operBitset?     ethpm_PortOperBitmap
+              +--rw rtpseudoIf-items
+              |  +--ro tDn?   reln_Dn
+              +--rw rtoperSourceInterface-items
+              |  +--ro tDn?   reln_Dn
+              +--rw rtvrfMbr-items
+              |  +--rw tDn?   reln_Dn
+              +--rw rsprotLbIf-items
+              |  +--rw tDn?    reln_Dn
+              |  +--rw mode?   ip_IfMode
+              +--rw rslbIfToLocale-items
+              |  +--rw RsLbIfToLocale-list* [tDn]
+              |     +--rw tDn    reln_Dn
+              +--rw rslbIfToOutRef-items
+              |  +--rw RsLbIfToOutRef-list* [tDn]
+              |     +--rw tDn    reln_Dn
+              +--rw rsl3If-items
+                 +--rw RsL3If-list* [tDn]
+                    +--rw tDn    reln_Dn

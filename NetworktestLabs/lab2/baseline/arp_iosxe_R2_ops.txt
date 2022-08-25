@@ -1,0 +1,101 @@
+{
+  "_exclude": [
+    "in_requests_pkts",
+    "in_replies_pkts",
+    "in_requests_pkts",
+    "out_replies_pkts",
+    "out_requests_pkts",
+    "in_drops",
+    "in_replies_pkts",
+    "out_requests_pkts",
+    "out_total"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "interfaces": {
+      "GigabitEthernet1": {
+        "arp_dynamic_learning": {
+          "local_proxy_enable": false,
+          "proxy_enable": true
+        },
+        "ipv4": {
+          "neighbors": {
+            "192.168.12.1": {
+              "ip": "192.168.12.1",
+              "link_layer_address": "5254.0000.003c",
+              "origin": "dynamic"
+            },
+            "192.168.12.2": {
+              "ip": "192.168.12.2",
+              "link_layer_address": "5254.0000.0056",
+              "origin": "static"
+            }
+          }
+        }
+      },
+      "GigabitEthernet2": {
+        "arp_dynamic_learning": {
+          "local_proxy_enable": false,
+          "proxy_enable": true
+        },
+        "ipv4": {
+          "neighbors": {
+            "192.168.23.1": {
+              "ip": "192.168.23.1",
+              "link_layer_address": "5254.0000.0057",
+              "origin": "static"
+            },
+            "192.168.23.2": {
+              "ip": "192.168.23.2",
+              "link_layer_address": "5200.0070.1b08",
+              "origin": "dynamic"
+            }
+          }
+        }
+      },
+      "GigabitEthernet26": {
+        "arp_dynamic_learning": {
+          "local_proxy_enable": false,
+          "proxy_enable": true
+        },
+        "ipv4": {
+          "neighbors": {
+            "192.168.50.1": {
+              "ip": "192.168.50.1",
+              "link_layer_address": "a065.1842.b807",
+              "origin": "dynamic"
+            },
+            "192.168.50.32": {
+              "ip": "192.168.50.32",
+              "link_layer_address": "000c.29d4.8096",
+              "origin": "dynamic"
+            },
+            "192.168.50.62": {
+              "ip": "192.168.50.62",
+              "link_layer_address": "5254.0000.006f",
+              "origin": "static"
+            }
+          }
+        }
+      },
+      "Loopback0": {
+        "arp_dynamic_learning": {
+          "local_proxy_enable": false,
+          "proxy_enable": true
+        }
+      }
+    },
+    "statistics": {
+      "entries_total": 7,
+      "in_drops": 0,
+      "in_replies_pkts": 73,
+      "in_requests_pkts": 87,
+      "incomplete_total": 0,
+      "out_replies_pkts": 15,
+      "out_requests_pkts": 9
+    }
+  }
+}

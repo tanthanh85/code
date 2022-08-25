@@ -1,0 +1,13 @@
+---
+  - name: this lab is for conditional tests
+    hosts: nxos
+    gather_facts: yes
+    tasks:
+      - name: show hostname
+        ios_command:
+          commands:
+            show run | in hostname
+        register: output
+      - name: print output
+        debug:
+          var: output.stdout

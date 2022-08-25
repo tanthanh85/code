@@ -1,0 +1,169 @@
+{
+  "_exclude": [
+    "age",
+    "uptime",
+    "last_change",
+    "cksum",
+    "seq",
+    "dead_timer",
+    "hello_timer",
+    "checksum",
+    "seq_num",
+    "statistics",
+    "lsas",
+    "last_state_change",
+    "bdr_ip_addr",
+    "dr_ip_addr",
+    "state",
+    "bdr_router_id",
+    "dr_router_id",
+    "area_scope_lsa_cksum_sum"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "vrf": {
+      "default": {
+        "address_family": {
+          "ipv4": {
+            "instance": {
+              "1": {
+                "adjacency_stagger": {
+                  "initial_number": 300,
+                  "maximum_number": 300
+                },
+                "areas": {
+                  "0.0.0.1": {
+                    "area_id": "0.0.0.1",
+                    "area_type": "normal",
+                    "database": {
+                      "lsa_types": {
+                        "1": {
+                          "lsa_type": 1,
+                          "lsas": {
+                            "1.1.1.1 1.1.1.1": {
+                              "adv_router": "1.1.1.1",
+                              "lsa_id": "1.1.1.1",
+                              "ospfv2": {
+                                "body": {
+                                  "router": {
+                                    "links": {
+                                      "1.1.1.1": {
+                                        "link_data": "255.255.255.255",
+                                        "link_id": "1.1.1.1",
+                                        "topologies": {
+                                          "0": {
+                                            "metric": 1,
+                                            "mt_id": 0
+                                          }
+                                        },
+                                        "type": "stub network"
+                                      }
+                                    },
+                                    "num_of_links": 1
+                                  }
+                                },
+                                "header": {
+                                  "adv_router": "1.1.1.1",
+                                  "age": 43,
+                                  "checksum": "0xCA58",
+                                  "length": 36,
+                                  "lsa_id": "1.1.1.1",
+                                  "option": "None",
+                                  "seq_num": "80000004",
+                                  "type": 1
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "interfaces": {
+                      "Loopback0": {
+                        "bfd": {
+                          "enable": false
+                        },
+                        "cost": 1,
+                        "demand_circuit": false,
+                        "enable": true,
+                        "interface_type": "loopback",
+                        "name": "Loopback0"
+                      }
+                    },
+                    "mpls": {
+                      "te": {
+                        "enable": false
+                      }
+                    },
+                    "statistics": {
+                      "area_scope_lsa_cksum_sum": "0x00DB9B",
+                      "area_scope_lsa_count": 2,
+                      "spf_runs_count": 2
+                    }
+                  }
+                },
+                "auto_cost": {
+                  "enable": false
+                },
+                "bfd": {
+                  "enable": false
+                },
+                "graceful_restart": {
+                  "cisco": {
+                    "enable": false,
+                    "type": "cisco"
+                  },
+                  "ietf": {
+                    "enable": false,
+                    "type": "ietf"
+                  }
+                },
+                "mpls": {
+                  "ldp": {
+                    "autoconfig": false,
+                    "autoconfig_area_id": "0.0.0.1"
+                  }
+                },
+                "nsr": {
+                  "enable": false
+                },
+                "preference": {
+                  "single_value": {
+                    "all": 110
+                  }
+                },
+                "router_id": "1.1.1.1",
+                "spf_control": {
+                  "paths": 4,
+                  "throttle": {
+                    "lsa": {
+                      "hold": 200,
+                      "maximum": 5000,
+                      "start": 50
+                    },
+                    "spf": {
+                      "hold": 200,
+                      "maximum": 5000,
+                      "start": 50
+                    }
+                  }
+                },
+                "stub_router": {
+                  "always": {
+                    "always": false,
+                    "external_lsa": false,
+                    "include_stub": false,
+                    "summary_lsa": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

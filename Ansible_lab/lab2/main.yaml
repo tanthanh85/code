@@ -1,0 +1,12 @@
+---
+- name: create vlan
+  import_playbook: condition.yaml
+- name: print hostname
+  import_playbook: condition1.yaml
+
+
+
+
+
+    
+

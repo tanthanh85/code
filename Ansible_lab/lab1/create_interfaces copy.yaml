@@ -1,0 +1,63 @@
+---
+
+- name: Interface Playbook 
+  hosts: nxos_1, nxos_2
+  gather_facts: no
+
+  tasks:
+    - name: change Eth 1/4 to layer 3 mode
+      nxos_interfaces:
+        config: 
+          - name: Ethernet1/4
+            mode: layer3
+            description: Layer 3 connection between VPC peers
+            enabled: yes
+        state: merged
+    - name: configure IP for Eth 1/4
+      nxos_l3_interfaces:
+        config:
+        - name: Ethernet1/4
+          ipv4:
+            - address: '{{Ethe14_ip}}'
+        state: merged
+    - name: create vlan 100
+      nxos_vlans:
+        config:
+        - vlan_id: 100
+          name: data_vlan
+        state: merged
+
+    - name: Create interface vlan 100
+      nxos_l3_interfaces:
+        config:
+        - name: Vlan100
+          ipv4:
+            - address: '{{vlan100_ip}}'
+        state: merged
+
+
+
+
+      
+    - name: Create port channel 1 for vpc peer link
+      nxos_lag_interfaces:
+        config:
+        - name:  port-channel1
+          members:
+          - member: Ethernet1/2
+          - member: Ethernet1/3
+        state: merged
+    - name: set Po 1 to trunk
+      nxos_l2_interfaces:
+        config:
+         
+        - name: port-channel1
+          trunk:
+            native_vlan: 1
+            allowed_vlans: 1,100
+        state: merged
+
+       
+
+       
+          

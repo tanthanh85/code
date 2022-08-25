@@ -1,0 +1,10 @@
+- name: Download list of vlans from 9ks
+  nxos_facts:
+    provider: '{{ nxapi }}'
+    gather_subset: legacy
+  register: facts
+
+
+- name: print vlan list
+  debug:
+    var: facts

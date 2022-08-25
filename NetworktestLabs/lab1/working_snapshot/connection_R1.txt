@@ -1,0 +1,120 @@
+
+2022-06-16 21:45:46,180: %UNICON-INFO: +++ R1 logfile working_snapshot/connection_R1.txt +++
+
+2022-06-16 21:45:46,181: %UNICON-INFO: +++ Unicon plugin iosxe +++
+The authenticity of host '192.168.50.61 (192.168.50.61)' can't be established.
+RSA key fingerprint is SHA256:2ezfYMhetOuIjguV+3y9FCXmVzZEv/yQXrKHs/02gLs.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+
+2022-06-16 21:45:47,045: %UNICON-INFO: +++ connection to spawn: ssh -l admin 192.168.50.61, id: 140203098775024 +++
+
+2022-06-16 21:45:47,045: %UNICON-INFO: connection to R1
+yes
+Warning: Permanently added '192.168.50.61' (RSA) to the list of known hosts.
+admin@192.168.50.61's password: 
+Permission denied, please try again.
+admin@192.168.50.61's password: 
+2022-06-16 21:49:47,390: %UNICON-INFO: +++ R1 logfile working_snapshot/connection_R1.txt +++
+
+2022-06-16 21:49:47,390: %UNICON-INFO: +++ Unicon plugin iosxe +++
+admin@192.168.50.61's password: 
+
+2022-06-16 21:49:51,921: %UNICON-INFO: +++ connection to spawn: ssh -l admin 192.168.50.61, id: 139950871315264 +++
+
+2022-06-16 21:49:51,921: %UNICON-INFO: connection to R1
+
+Permission denied, please try again.
+admin@192.168.50.61's password: 
+2022-06-16 21:55:02,160: %UNICON-INFO: +++ R1 logfile working_snapshot/connection_R1.txt +++
+
+2022-06-16 21:55:02,160: %UNICON-INFO: +++ Unicon plugin iosxe +++
+Password: 
+
+2022-06-16 21:55:04,713: %UNICON-INFO: +++ connection to spawn: ssh -l admin 192.168.50.61, id: 140225328135856 +++
+
+2022-06-16 21:55:04,713: %UNICON-INFO: connection to R1
+
+
+
+
+R1#
+
+2022-06-16 21:55:05,230: %UNICON-INFO: +++ initializing handle +++
+
+2022-06-16 21:55:05,297: %UNICON-INFO: +++ R1 with alias 'cli': executing command 'term length 0' +++
+term length 0
+R1#
+
+2022-06-16 21:55:05,544: %UNICON-INFO: +++ R1 with alias 'cli': executing command 'term width 0' +++
+term width 0
+R1#
+
+2022-06-16 21:55:05,772: %UNICON-INFO: +++ R1 with alias 'cli': executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 17.06.01a
+Cisco IOS Software [Bengaluru], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.6.1a, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 21-Aug-21 03:20 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2021 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+R1 uptime is 53 minutes
+Uptime for this control processor is 55 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: factory-reset
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: 
+License Type: Perpetual
+Next reload license Level: 
+
+Addon License Level: 
+Addon License Type: Subscription
+Next reload addon license Level: 
+
+The current throughput level is 10000 kbps 
+
+
+Smart Licensing Status: Registration Not Applicable/Not Applicable
+
+cisco C8000V (VXE) processor (revision VXE) with 2028465K/3075K bytes of memory.
+Processor board ID 9V5WSCW6XB8
+Router operating mode: Autonomous
+26 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+3965312K bytes of physical memory.
+5234688K bytes of virtual hard disk at bootflash:.
+
+Configuration register is 0x2102
+
+R1#

@@ -1,0 +1,38 @@
++++ SW1 with alias 'cli': executing command 'show lldp timers' +++
+show lldp timers
+           ^
+% Invalid command at '^' marker.
+SW1# 
++++ SW1 with alias 'cli': executing command 'show lldp tlv-select' +++
+show lldp tlv-select
+           ^
+% Invalid command at '^' marker.
+SW1# 
++++ SW1 with alias 'cli': executing command 'show lldp traffic' +++
+show lldp traffic
+           ^
+% Invalid command at '^' marker.
+SW1# 
++++ SW1 with alias 'cli': executing command 'show lldp neighbors detail' +++
+show lldp neighbors detail
+           ^
+% Invalid command at '^' marker.
+SW1# 
++++ SW1 with alias 'cli': executing command 'show lldp all' +++
+show lldp all
+           ^
+% Invalid command at '^' marker.
+SW1# 
+Could not learn <class 'genie.libs.parser.nxos.show_lldp.ShowLldpAll'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Lldp'                                                                                                               |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_lldp.ShowLldpTimers'>                                                                                   |
+|   cmd: <class 'genie.libs.parser.nxos.show_lldp.ShowLldpTlvSelect'>                                                                                |
+|   cmd: <class 'genie.libs.parser.nxos.show_lldp.ShowLldpTraffic'>                                                                                  |
+|   cmd: <class 'genie.libs.parser.nxos.show_lldp.ShowLldpNeighborsDetail'>                                                                          |
+|   cmd: <class 'genie.libs.parser.nxos.show_lldp.ShowLldpAll'>                                                                                      |
+|====================================================================================================================================================|

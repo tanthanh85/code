@@ -1,0 +1,200 @@
++++ R1 with alias 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 1.1.1.1
+ Start time: 00:07:18.229, Time elapsed: 00:50:13.247
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Supports Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 50 msecs
+ Minimum hold time between two consecutive SPFs 200 msecs
+ Maximum wait time between two consecutive SPFs 5000 msecs
+ Incremental-SPF disabled
+ Initial LSA throttle delay 50 msecs
+ Minimum hold time for LSA throttle 200 msecs
+ Maximum wait time for LSA throttle 5000 msecs
+ Minimum LSA arrival 100 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ EXCHANGE/LOADING adjacency limit: initial 300, process maximum 300
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area 1
+        Number of interfaces in this area is 1 (1 loopback)
+	Area has no authentication
+	SPF algorithm last executed 00:00:40.221 ago
+	SPF algorithm executed 2 times
+	Area ranges are
+	Number of LSA 2. Checksum Sum 0x00DB9B
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 1
+	Number of indication LSA 1
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+R1#
++++ R1 with alias 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 1.1.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    1.1.1.1 0.0.0.0 area 1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    3.3.3.3              110      00:30:51
+    2.2.2.2              110      00:39:01
+  Distance: (default is 110)
+
+R1#
++++ R1 with alias 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ network 1.1.1.1 0.0.0.0 area 1
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+Loopback0
+  Process ID 1, Area 1
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+  Area 1 MPLS TE not initialized
+R1#
++++ R1 with alias 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ network 1.1.1.1 0.0.0.0 area 1
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+		Router Link States (Area 1)
+
+  LS age: 43
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 80000004
+  Checksum: 0xCA58
+  Length: 36
+  Number of Links: 1
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 1.1.1.1
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+Loopback0 is up, line protocol is up 
+  Internet Address 1.1.1.1/32, Interface ID 32, Area 1
+  Attached via Network Statement
+  Process ID 1, Router ID 1.1.1.1, Network Type LOOPBACK, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Loopback interface is treated as a stub Host
+R1#
++++ R1 with alias 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ network 1.1.1.1 0.0.0.0 area 1
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+R1#
++++ R1 with alias 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+R1#
+w ip ospf neighbor detail
+Parser Output is empty
+Could not learn <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'>
+Show Command: show ip ospf sham-links
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Ospf'                                                                                                               |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'>                                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'>, arguments: {'vrf':''}                                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'>, arguments: {'interface':''}                                         |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'>                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseRouter'>                                                                        |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseNetwork'>                                                                       |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseExternal'>                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseSummary'>                                                                       |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseOpaqueArea'>                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'>, arguments: {'interface':''}                                                |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'>                                                                          |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'>, arguments: {'neighbor':''}                                            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'>                                                                             |
+|====================================================================================================================================================|

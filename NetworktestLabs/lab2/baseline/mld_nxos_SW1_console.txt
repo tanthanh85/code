@@ -1,0 +1,20 @@
++++ SW1 with alias 'cli': executing command 'show ipv6 mld groups vrf all' +++
+show ipv6 mld groups vrf all
+SW1# 
++++ SW1 with alias 'cli': executing command 'show ipv6 mld interface vrf all' +++
+show ipv6 mld interface vrf all
+SW1# 
++++ SW1 with alias 'cli': executing command 'show ipv6 mld local-groups vrf all' +++
+show ipv6 mld local-groups vrf all
+SW1# 
+Could not learn <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldLocalGroups'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Mld'                                                                                                                |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldGroups'>, arguments: {'vrf':'all'}                                                       |
+|   cmd: <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldInterface'>, arguments: {'vrf':'all'}                                                    |
+|   cmd: <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldLocalGroups'>, arguments: {'vrf':'all'}                                                  |
+|====================================================================================================================================================|

@@ -1,0 +1,13 @@
+---
+
+- name: Config HSRP on both switches
+  hosts: nxos_1, nxos_2
+  gather_facts: no
+
+  tasks:
+    - name: Ensure HSRP is configured 
+      nxos_hsrp:
+        group: 100
+        vip: 192.168.100.3
+        interface: Vlan100
+        priority: '{{priority}}'

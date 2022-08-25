@@ -1,0 +1,51 @@
+- name: Playbook to create a new tennant
+  hosts: apic1
+  gather_facts: no
+
+  vars:
+    aci_login: &aci_login
+        hostname: "{{ apic_host }}"
+        username: "{{ apic_username }}"
+        password: "{{ apic_password }}"
+        use_proxy: "{{ apic_use_proxy }}"
+        validate_certs: "{{ apic_validate_certs }}"
+
+  tasks:
+    - name: create a new tenant
+      aci_tenant:
+        <<: *aci_login
+        tenant: "{{ tenant }}"
+        description: This tenant is created by Andy
+      delegate_to: localhost
+    - name: create a new application profile
+      aci_ap:
+        <<: *aci_login
+        tenant: "{{ item.tenant }}"
+        ap: "{{ item.ap }}"
+      delegate_to: localhost
+      loop: "{{ aps }}"
+    - name: create vrf
+      aci_vrf:
+        <<: *aci_login
+        tenant: "{{ tenant }}"
+        vrf: "{{ vrf }}"
+      delegate_to: localhost
+    - name: create bridge domains
+      aci_bd:
+        <<: *aci_login
+        tenant: "{{ tenant }}"
+        bd: "{{ bd.name }}"
+        vrf: "{{ vrf }}"
+        enable_routing: yes
+        arp_flooding: yes
+        l2_unknown_unicast: flood
+      delegate_to: localhost
+    - name: TASK 04 - Create BD subnet
+      aci_bd_subnet:
+        <<: *aci_login
+        tenant: "{{ tenant }}"
+        bd: "{{ bd.name }}"
+        gateway: "{{ bd.gateway }}"
+        mask: "{{ bd.mask }}"
+        scope: public
+      delegate_to: localhost

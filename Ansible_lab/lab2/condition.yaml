@@ -1,0 +1,24 @@
+---
+  - name: this lab is for conditional tests
+    hosts: nxos
+    gather_facts: yes
+    vars:
+      vlan_list:
+        - id: 105
+          name: vlan_105
+        - id: 106
+          name: vlan_106
+
+    tasks:
+      - name: print facts
+        debug:
+          var: ansible_net_hostname
+      - name: Create vlan 100 when hostname is nxos_1
+        nxos_vlans:
+          config:
+            - vlan_id: '{{item.id}}'
+              name: '{{item.name}}'
+              enabled: True
+          state: replaced
+        when: ansible_net_hostname == "SW1"
+        with_items: '{{vlan_list}}'

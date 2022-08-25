@@ -1,0 +1,312 @@
++++ R1 with alias 'cli': executing command 'show running-config' +++
+show running-config
+Building configuration...
+
+Current configuration : 7645 bytes
+!
+! Last configuration change at 12:31:26 UTC Sun Jun 19 2022
+!
+version 17.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service call-home
+platform qfp utilization monitor load 80
+platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+enable password cisco
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+ip domain name cisco.com
+!
+!
+!
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+multilink bundle-name authenticated
+!
+!
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+crypto pki trustpoint TP-self-signed-3750225636
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3750225636
+ revocation-check none
+ rsakeypair TP-self-signed-3750225636
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-3750225636
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33373530 32323536 3336301E 170D3232 30363139 31323330 
+  31345A17 0D333230 36313831 32333031 345A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 37353032 
+  32353633 36308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100B872 4332232D ED84F797 FBB009F9 256D5313 37C189C3 D4F55ABB 
+  5BFCF646 2F4A0BCC FA9F4F08 90C2AE1C F45CFBA2 63BEDD8D A602D95C ED63AC4B 
+  392A5C0B F37921D8 8EA80253 448F766B 92221251 20F2BDC8 B357A04A 37E64DC2 
+  8F425545 320897E9 ECBAEB5A 24A184EC 6621880A 491D0D54 9548EEA6 A1DFEFFB 
+  63B2FC77 49CB5E11 B3503AE2 8E9D6EA7 D5CFE0FB 7286C119 D3DF6285 12AB4BB0 
+  A7A781A5 8D3F0A5F 1582ABCC FDCF335C 13669BED CC058B2E FE5BD788 6A36EFD8 
+  ADB7F8C5 78F3A5E5 C54AE64A D36AC9E1 614C755F 26D9E867 28950CF9 A4ACCD7B 
+  6959513C ECDA0809 877809F7 2351FF51 17B0B31D AC6136AF 11DD27E9 1F4D8DBC 
+  B9BCEA38 724D0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14F1BD97 4AC6DCDB DF82057C 1ECB9A63 A447D1E4 
+  5B301D06 03551D0E 04160414 F1BD974A C6DCDBDF 82057C1E CB9A63A4 47D1E45B 
+  300D0609 2A864886 F70D0101 05050003 82010100 26451747 FB9BCF04 26F64921 
+  54C2E2F8 885FF588 0382A395 41F8BE8C D63CD989 E7A54CAD 9063C25C 18F5F4BB 
+  559CC513 A46CDA2B D8022ADD DC57B178 D5DC18E8 AA337E5A 1427A27E 7911BF31 
+  B11AE295 07A4A2D3 BEB08819 CB85EA67 4287BD3D 6A751A6C 2F04F64C 0A2C326A 
+  EFCAF766 39952357 6DC2F6D4 F8B603D4 D9FC8126 1799C726 24A9CCA5 6594317C 
+  1A935C6B 8E82D4C5 4DFF3DF2 05923D4B 9AA0E421 3C3083B7 F1D4B5D1 69AC4F26 
+  CB33964A E226B62B C4D9BE47 E933B7EC 14D02883 A7278046 82B7D95F EDB1E639 
+  D8038DF4 4D6A96BF 009EBE5C 1734C9E7 24B64792 5612B097 24067543 3445BF8C 
+  93075D05 DF0381FF 9EBCBE94 1BE62CBA BBF28E6E
+  	quit
+!
+license udi pid C8000V sn 9V5WSCW6XB8
+diagnostic bootup level minimal
+memory free low-watermark processor 68484
+!
+!
+username admin privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface GigabitEthernet1
+ ip address 192.168.12.1 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet7
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet8
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet9
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet10
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet11
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet12
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet13
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet14
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet15
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet16
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet17
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet18
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet19
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet20
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet21
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet22
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet23
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet24
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet25
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet26
+ ip address 192.168.50.61 255.255.255.0
+ negotiation auto
+!
+router ospf 1
+ network 1.1.1.1 0.0.0.0 area 1
+ network 192.168.12.0 0.0.0.255 area 0
+!
+ip forward-protocol nd
+no ip http server
+ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ stopbits 1
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+!
+!
+!
+!
+!
+!
+end
+
+R1#

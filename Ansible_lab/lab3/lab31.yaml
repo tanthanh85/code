@@ -1,0 +1,7 @@
+- name: test template
+  hosts: nxos_1
+  gather_facts: no
+
+  roles:
+    - role: nxos
+    

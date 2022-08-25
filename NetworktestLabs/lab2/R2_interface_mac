@@ -1,0 +1,28 @@
+Interface,MAC address
+GigabitEthernet1,5254.0000.0056
+GigabitEthernet2,5254.0000.0057
+GigabitEthernet3,5254.0000.0058
+GigabitEthernet4,5254.0000.0059
+GigabitEthernet5,5254.0000.005a
+GigabitEthernet6,5254.0000.005b
+GigabitEthernet7,5254.0000.005c
+GigabitEthernet8,5254.0000.005d
+GigabitEthernet9,5254.0000.005e
+GigabitEthernet10,5254.0000.005f
+GigabitEthernet11,5254.0000.0060
+GigabitEthernet12,5254.0000.0061
+GigabitEthernet13,5254.0000.0062
+GigabitEthernet14,5254.0000.0063
+GigabitEthernet15,5254.0000.0064
+GigabitEthernet16,5254.0000.0065
+GigabitEthernet17,5254.0000.0066
+GigabitEthernet18,5254.0000.0067
+GigabitEthernet19,5254.0000.0068
+GigabitEthernet20,5254.0000.0069
+GigabitEthernet21,5254.0000.006a
+GigabitEthernet22,5254.0000.006b
+GigabitEthernet23,5254.0000.006c
+GigabitEthernet24,5254.0000.006d
+GigabitEthernet25,5254.0000.006e
+GigabitEthernet26,5254.0000.006f
+Loopback0,Not available

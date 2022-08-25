@@ -1,0 +1,10 @@
+
+- name: this lab is for conditional tests
+  hosts: SW1
+  gather_facts: yes
+  tasks:
+
+    - name: print facts
+      debug:
+      #  var: test
+        msg: ansible_facts

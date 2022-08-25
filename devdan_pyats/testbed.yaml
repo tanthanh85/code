@@ -1,0 +1,72 @@
+# testbed:
+#   name: Multi Platform Network
+#   credentials:
+#     default:
+#       username: '%ENV{PYATS_USERNAME}'
+#       password: '%ENV{PYATS_PASSWORD}'
+#     enable:
+#       password: '%ENV{PYATS_PASSWORD}'
+#     line:
+#       password: '%ENV{PYATS_PASSWORD}'
+#     linux: 
+#       password: '%ENV{PYATS_PASSWORD}'
+
+
+
+
+testbed:
+    name: IOS_Testbed
+    credentials:
+        default:
+            username: admin
+            password: cisco
+        enable:
+            password: cisco
+ 
+devices:
+    R1:
+        os: ios
+        type: ios
+        connections:
+            vty:
+                protocol: ssh
+                ip: 192.168.50.61
+            # netconf:
+            #     class: yang.connector.Netconf
+            #     ip : "192.168.50.61"
+            #     port: 830
+            #     username: admin
+            #     password: cisco
+            #     credentials:
+            #         netconf:
+            #             username: admin
+            #             password: cisco
+    R2:
+        os: ios
+        type: ios
+        connections:
+            vty:
+                protocol: ssh
+                ip: 192.168.50.62
+            
+topology:
+    R1:
+        interfaces:
+            GigabitEthernet1:
+                ipv4: 192.168.12.1/24
+                link: link-1
+                type: ethernet
+            Loopback0:
+                ipv4: 1.1.1.1/32
+                link: R1_Loopback0
+                type: loopback
+    R2:
+        interfaces:
+            GigabitEthernet1:
+                ipv4: 192.168.12.2/24
+                link: link-1
+                type: ethernet
+            Loopback0:
+                ipv4: 2.2.2.2/32
+                link: R2_Loopback0
+                type: loopback

@@ -1,0 +1,31 @@
+---
+
+- name: sample playbook for interface
+  hosts: nxos
+  gather_facts: no
+
+  tasks:
+    - name: default interfaces
+      nxos_interfaces:
+        config: 
+          - name: "{{item}}"
+            mode: layer3
+            description: This is Andy who changed
+          # - name: {{item.interface}}
+          #   mode: layer3
+            enabled: yes
+          #   description: This is Andy
+        state: replaced
+      with_items:
+        - Ethernet1/3
+        - Ethernet1/4
+        - Ethernet1/5
+        - Ethernet1/6
+        - Ethernet1/7
+        - Ethernet1/8
+        - Ethernet1/9
+        - Ethernet1/10
+
+       
+       
+          

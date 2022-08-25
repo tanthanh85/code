@@ -1,0 +1,11 @@
+ansible_user: admin
+ansible_password: cisco
+ansible_connection: network_cli
+ansible_network_os: nxos
+Ethe14_ip: "192.168.200.1/24"
+vlan100_ip: "192.168.100.1/24"
+pkl_src: "192.168.1.1"
+pkl_dest: "192.168.1.2"
+management_ip: "192.168.1.1/30"
+role_priority: 32667
+priority: '150'

@@ -1,0 +1,8 @@
+ansible_user: admin
+ansible_password: Th@nhT@n123
+ansible_network_os: ftd
+ansible_host_key_checking: false
+ansible_httpapi_port: 443
+ansible_httpapi_use_ssl:  True
+ansible_httpapi_validate_certs: False
+network_type: HOST

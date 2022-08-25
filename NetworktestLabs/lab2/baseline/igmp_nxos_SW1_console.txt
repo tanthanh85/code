@@ -1,0 +1,20 @@
++++ SW1 with alias 'cli': executing command 'show ip igmp interface vrf all' +++
+show ip igmp interface vrf all
+SW1# 
++++ SW1 with alias 'cli': executing command 'show ip igmp local-groups vrf all' +++
+show ip igmp local-groups vrf all
+SW1# 
++++ SW1 with alias 'cli': executing command 'show ip igmp groups vrf all' +++
+show ip igmp groups vrf all
+SW1# 
+Could not learn <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpGroups'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Igmp'                                                                                                               |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpInterface'>, arguments: {'vrf':'all'}                                                    |
+|   cmd: <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpLocalGroups'>, arguments: {'vrf':'all'}                                                  |
+|   cmd: <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpGroups'>, arguments: {'vrf':'all'}                                                       |
+|====================================================================================================================================================|

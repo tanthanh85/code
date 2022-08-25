@@ -1,0 +1,14 @@
+Issue while parsing: <class 'genie.libs.parser.nxos.show_arp.ShowIpArpstatisticsVrfAll'>
+
+Traceback (most recent call last):
+  File "src/genie/cli/commands/learn.py", line 365, in genie.cli.commands.learn.LearnCommand._retrieve_ops
+  File "/home/expert/venvs/main/lib/python3.9/site-packages/genie/libs/ops/arp/nxos/arp.py", line 115, in learn
+    self.make(final_call=True)
+  File "/home/expert/venvs/main/lib/python3.9/site-packages/genie/ops/base/base.py", line 101, in make
+    self.maker.make(*args, **kwargs)
+  File "src/genie/ops/base/maker.py", line 312, in genie.ops.base.maker.Maker.make
+  File "src/genie/ops/base/maker.py", line 418, in genie.ops.base.maker.Maker._call_parser
+  File "src/genie/metaparser/_metaparser.py", line 312, in genie.metaparser._metaparser.MetaParser.parse
+  File "src/genie/metaparser/_metaparser.py", line 292, in genie.metaparser._metaparser.MetaParser.parse
+  File "src/genie/metaparser/util/schemaengine.py", line 415, in genie.metaparser.util.schemaengine.Schema.validate
+genie.metaparser.util.exceptions.SchemaMissingKeyError: Missing keys: [['statistics', 'adjacency', 'adjacency_timeouts'], ['statistics', 'adjacency', 'adjacency_deletes'], ['statistics', 'adjacency', 'adjacency_adds']]

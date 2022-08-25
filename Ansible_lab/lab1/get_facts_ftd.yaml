@@ -1,0 +1,7 @@
+- name: sample playbook for interface
+  hosts: vftd
+  gather_facts: yes
+
+  tasks:
+
+    - name: enable vpc

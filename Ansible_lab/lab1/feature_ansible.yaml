@@ -1,0 +1,31 @@
+---
+
+- name: sample playbook for interface
+  hosts: nxos_1, nxos_2
+  gather_facts: no
+
+  tasks:
+
+    - name: enable vpc
+      nxos_feature:
+        feature: vpc
+        state: enabled
+    - name: enable lacp
+      nxos_feature:
+        feature: lacp
+        state: enabled
+    - name: enable interface vlan
+      nxos_feature:
+        feature: interface-vlan
+        state: enabled   
+    - name: enable HSRP
+      nxos_feature:
+        feature: hsrp
+        state: enabled
+    - name: enable ospf
+      nxos_feature:
+        feature: ospf
+        state: enabled   
+       
+       
+          

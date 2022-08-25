@@ -1,0 +1,9 @@
+---
+# vars file for create_vlans
+
+
+vlan_list:
+  - id: 109
+    name: vlan_109
+  - id: 110
+    name: vlan_110

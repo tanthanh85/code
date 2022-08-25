@@ -1,0 +1,7 @@
+
+
+- name: this lab is for conditional tests
+  hosts: SW1
+  gather_facts: no
+  roles:
+    - create_vlans

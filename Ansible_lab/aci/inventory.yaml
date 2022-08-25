@@ -1,0 +1,23 @@
+all:
+  hosts:
+    apic1:
+      apic_host: sandboxapicdc.cisco.com
+      apic_use_proxy: no
+      apic_validate_certs: no
+      apic_username: admin
+      apic_password: "!v3G@!4@Y"
+  vars:
+    apic_use_proxy: no
+    apic_validate_certs: no
+    tenant: Devnet_Andy
+    vrf: Andy_VRF
+    aps:
+      - tenant: Devnet_Andy
+        ap: Loop-Ap1
+      - tenant: Devnet_Andy
+        ap: Loop-Ap2
+    bd:
+      name: BD-Web
+      gateway: 192.168.1.254
+      mask: 24
+

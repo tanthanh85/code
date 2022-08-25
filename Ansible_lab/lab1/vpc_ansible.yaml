@@ -1,0 +1,24 @@
+---
+
+- name: sample playbook for interface
+  hosts: nxos_1, nxos_2
+  gather_facts: no
+
+  tasks:
+    - name: config VPC
+      nxos_vpc:
+        domain: 100
+        role_priority: '{{role_priority}}'
+        system_priority: 2000
+        peer_gw: true
+        pkl_src: '{{pkl_src}}'
+        pkl_dest: '{{pkl_dest}}'
+        pkl_vrf: management
+
+    - name: add peer link
+      nxos_vpc_interface:
+        portchannel: 1
+        peer_link: yes
+       
+       
+        

@@ -1,0 +1,17 @@
+---
+
+- name: sample playbook for interface
+  hosts: nxos_2
+  gather_facts: yes
+
+  tasks:
+    # - name: print facts
+    #   debug:
+    #     var: hostvars
+
+    - name: save all facts to host specific file
+      copy:
+        content: '{{hostvars}}'
+        dest: "~/Ansible_lab/lab1/facts.json"
+      delegate_to: localhost
+      

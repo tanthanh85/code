@@ -1,0 +1,8 @@
+all:
+  children:
+    IOSXE:
+      children:
+        R1:
+          hosts:
+            192.168.50.61:
+  

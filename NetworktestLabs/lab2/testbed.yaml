@@ -1,0 +1,67 @@
+testbed:
+  name: devnet_lab_testbed
+  credentials:
+    default:
+      username: '%ENV{PYATS_USERNAME}'
+      password: '%ENV{PYATS_PASSWORD}'
+    enable:
+      password: '%ENV{PYATS_PASSWORD}'
+
+devices:
+  R1:
+    connections:
+      cli:
+        ip: 192.168.50.61
+        protocol: ssh
+    os: iosxe
+    type: iosxe
+  R2:
+    connections:
+      cli:
+        ip: 192.168.50.62
+        protocol: ssh
+    os: iosxe
+    type: iosxe
+  SW1:
+    connections:
+      cli:
+        ip: 192.168.50.63
+        protocol: ssh
+    os: nxos
+    type: nxos
+
+topology:
+  R1:
+    interfaces:
+      GigabitEthernet1:
+        ipv4: 192.168.12.1/24
+        link: link-1
+        type: ethernet
+      Loopback0:
+        ipv4: 1.1.1.1/32
+        link: R1_loopback0
+        type: loopback
+  R2:
+    interfaces:
+      GigabitEthernet1:
+        ipv4: 192.168.12.2/24
+        link: link-1
+        type: ethernet
+      GigabitEthernet2:
+        ipv4: 192.168.23.1/24
+        link: link-2
+        type: ethernet
+      Loopback0:
+        ipv4: 2.2.2.2/32
+        link: R2_loopback0
+        type: loopback
+  SW1:
+    interfaces:
+      Ethernet1/2:
+        ipv4: 192.168.23.2/24
+        link: link-2
+        type: ethernet
+      Loopback0:
+        ipv4: 3.3.3.3/32
+        link: SW1_loopback0
+        type: loopback

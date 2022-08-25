@@ -1,0 +1,4 @@
+from my-custom-image-2
+run apt-get clean
+run apt-get -y update
+run apt-get install nano

@@ -1,0 +1,13 @@
+---
+# vars file for nxos
+
+nxapi:
+  host: NXOS_1
+  username: admin
+  password: cisco
+  transport: nxapi
+cli:
+  host: NXOS_1
+  username: admin
+  password: cisco
+  transport: cli

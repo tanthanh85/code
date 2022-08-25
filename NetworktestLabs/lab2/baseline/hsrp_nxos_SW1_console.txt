@@ -1,0 +1,20 @@
++++ SW1 with alias 'cli': executing command 'show hsrp all' +++
+show hsrp all
+           ^
+% Invalid command at '^' marker.
+SW1# 
++++ SW1 with alias 'cli': executing command 'show hsrp delay' +++
+show hsrp delay
+           ^
+% Invalid command at '^' marker.
+SW1# 
+Could not learn <class 'genie.libs.parser.nxos.show_hsrp.ShowHsrpDelay'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Hsrp'                                                                                                               |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_hsrp.ShowHsrpAll'>                                                                                      |
+|   cmd: <class 'genie.libs.parser.nxos.show_hsrp.ShowHsrpDelay'>                                                                                    |
+|====================================================================================================================================================|

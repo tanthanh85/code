@@ -1,0 +1,17 @@
++++ SW1 with alias 'cli': executing command 'show ip prefix-list' +++
+show ip prefix-list
+SW1# 
++++ SW1 with alias 'cli': executing command 'show ipv6 prefix-list' +++
+show ipv6 prefix-list
+SW1# 
+ty
+Could not learn <class 'genie.libs.parser.nxos.show_prefix_list.ShowIpv6PrefixList'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'PrefixList'                                                                                                         |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_prefix_list.ShowIpPrefixList'>                                                                          |
+|   cmd: <class 'genie.libs.parser.nxos.show_prefix_list.ShowIpv6PrefixList'>                                                                        |
+|====================================================================================================================================================|

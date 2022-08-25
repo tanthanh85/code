@@ -1,0 +1,28 @@
+- name: Playbook to create a new tennant
+  hosts: apic1
+  gather_facts: no
+
+  vars:
+    aci_login: &aci_login
+        hostname: "{{ apic_host }}"
+        username: "{{ apic_username }}"
+        password: "{{ apic_password }}"
+        use_proxy: "{{ apic_use_proxy }}"
+        validate_certs: "{{ apic_validate_certs }}"
+
+  tasks:
+    - name: TASK 01 - Create Tenant using REST module
+      aci_rest:
+        <<: *aci_login
+        method: post
+        path: /api/mo/uni.json
+        content: |
+            {
+            "fvTenant":{
+              "attributes":{
+                "name": "rest_tenant",
+                "descr": "configured by Ansible REST module"
+                }
+              }
+            }
+      delegate_to: localhost

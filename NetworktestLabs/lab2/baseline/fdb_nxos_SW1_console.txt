@@ -1,0 +1,35 @@
++++ SW1 with alias 'cli': executing command 'show mac address-table aging-time' +++
+show mac address-table aging-time
+Aging Time
+----------
+    1800
+SW1# 
++++ SW1 with alias 'cli': executing command 'show mac address-table' +++
+show mac address-table
+Legend: 
+	* - primary entry, G - Gateway MAC, (R) - Routed MAC, O - Overlay MAC
+	age - seconds since last seen,+ - primary entry using vPC Peer-Link,
+	(T) - True, (F) - False, C - ControlPlane MAC, ~ - vsan
+   VLAN     MAC Address      Type      age     Secure NTFY Ports
+---------+-----------------+--------+---------+------+----+------------------
+G    -     5200.0070.1b08   static   -         F      F    sup-eth1(R)
+SW1# 
++++ SW1 with alias 'cli': executing command 'show system internal l2fwder Mac' +++
+show system internal l2fwder Mac
+                             ^
+% Invalid command at '^' marker.
+SW1# 
+Could not learn <class 'genie.libs.parser.nxos.show_system.ShowSystemInternalL2fwderMac'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Fdb'                                                                                                                |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_fdb.ShowMacAddressTableAgingTime'>                                                                      |
+|   cmd: <class 'genie.libs.parser.nxos.show_fdb.ShowMacAddressTable'>, arguments: {'address':'','interface':'','vlan':''}                           |
+|====================================================================================================================================================|
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_system.ShowSystemInternalL2fwderMac'>                                                                   |
+|====================================================================================================================================================|

@@ -1,0 +1,204 @@
++++ R1 with alias 'cli': executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 17.06.01a
+Cisco IOS Software [Bengaluru], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.6.1a, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 21-Aug-21 03:20 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2021 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+R1 uptime is 6 minutes
+Uptime for this control processor is 9 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: 
+License Type: Perpetual
+Next reload license Level: 
+
+Addon License Level: 
+Addon License Type: Subscription
+Next reload addon license Level: 
+
+The current throughput level is 10000 kbps 
+
+
+Smart Licensing Status: Registration Not Applicable/Not Applicable
+
+cisco C8000V (VXE) processor (revision VXE) with 2028465K/3075K bytes of memory.
+Processor board ID 9V5WSCW6XB8
+Router operating mode: Autonomous
+26 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+3965324K bytes of physical memory.
+5234688K bytes of virtual hard disk at bootflash:.
+
+Configuration register is 0x2102
+
+R1#
++++ R1 with alias 'cli': executing command 'dir' +++
+dir
+Directory of bootflash:/
+
+131078  drwx             4096  Jun 19 2022 12:33:14 +00:00  .installer
+131075  drwx            20480  Jun 19 2022 12:32:51 +00:00  tracelogs
+131123  drwx             4096  Jun 19 2022 12:29:48 +00:00  license_evlog
+17      -rw-              509  Jun 19 2022 12:29:47 +00:00  cvac.log
+20      -rw-              157  Jun 19 2022 12:29:46 +00:00  csrlxc-cfg.log
+16      -rw-               30  Jun 19 2022 12:28:34 +00:00  throughput_monitor_params
+13      -rw-              969  Jun 19 2022 12:27:00 +00:00  mode_event_log
+30      -rw-              244  Jun 17 2022 06:54:49 +00:00  .iox_dir_list
+131094  drwx             4096  Jun 17 2022 06:54:44 +00:00  .dbpersist
+131082  drwx             4096  Jun 17 2022 06:54:11 +00:00  iox_host_data_share
+131137  drwx             4096  Jun 17 2022 06:54:09 +00:00  guest-share
+131135  drwx             4096  Jun 17 2022 06:54:07 +00:00  onep
+19      -rw-               16  Jun 17 2022 06:53:47 +00:00  iosxe_config.txt.md5
+18      -rw-                1  Jun 17 2022 06:53:47 +00:00  .cvac_version
+131074  drwx             4096  Jun 17 2022 06:53:43 +00:00  pnp-info
+131073  drwx             4096  Jun 17 2022 06:53:19 +00:00  .prst_sync
+131121  drwx             4096  Jun 17 2022 06:52:28 +00:00  virtual-instance
+14      -rw-            20109  Jun 17 2022 06:52:01 +00:00  ios_core.p7b
+15      -rwx             1314  Jun 17 2022 06:52:01 +00:00  trustidrootx3_ca.ca
+131088  drwx             4096  Jun 17 2022 06:51:57 +00:00  .rollback_timer
+131079  drwx             4096  Jun 17 2022 06:51:56 +00:00  core
+131083  drwx             4096  Jun 17 2022 06:51:52 +00:00  bootlog_history
+131080  drwx             4096  Jun 17 2022 06:51:16 +00:00  appqoe-service
+29      -rw-         51416381  Aug 21 2021 22:14:17 +00:00  c8000v-rpboot.17.06.01a.SPA.pkg
+21      -rw-        753898584  Aug 21 2021 22:14:17 +00:00  c8000v-mono-universalk9.17.06.01a.SPA.pkg
+12      -rw-            66636  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_dreamliner.17.06.01a.SPA.pkg
+24      -rw-         12981324  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_nim_async.17.06.01a.SPA.pkg
+22      -rw-          2376780  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_dsp_sp2700.17.06.01a.SPA.pkg
+25      -rw-         17708108  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_nim_cwan.17.06.01a.SPA.pkg
+26      -rw-          4387912  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_nim_ge.17.06.01a.SPA.pkg
+11      -rw-             5955  Aug 21 2021 22:14:16 +00:00  packages.conf
+27      -rw-         11568204  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_nim_shdsl.17.06.01a.SPA.pkg
+23      -rw-         11760716  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_ngwic_t1e1.17.06.01a.SPA.pkg
+28      -rw-          5571660  Aug 21 2021 22:14:16 +00:00  c8000v-firmware_nim_xdsl.17.06.01a.SPA.pkg
+
+5183766528 bytes total (4012646400 bytes free)
+R1#
++++ R1 with alias 'cli': executing command 'show redundancy' +++
+show redundancy
+Redundant System Information :
+------------------------------
+       Available system uptime = 6 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = none
+
+                 Hardware Mode = Simplex
+    Configured Redundancy Mode = Non-redundant
+     Operating Redundancy Mode = Non-redundant
+              Maintenance Mode = Disabled
+                Communications = Down      Reason: Failure
+
+Current Processor Information :
+-------------------------------
+               Active Location = slot 6
+        Current Software state = ACTIVE
+       Uptime in current state = 6 minutes
+                 Image Version = Cisco IOS Software [Bengaluru], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.6.1a, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 21-Aug-21 03:20 by mcpre
+        Configuration register = 0x2102
+
+Peer (slot: 7) information is not available because it is in 'DISABLED' state
+
+R1#
++++ R1 with alias 'cli': executing command 'show inventory' +++
+show inventory
+NAME: "Chassis", DESCR: "Cisco Catalyst 8000V Edge Chassis"
+PID: C8000V            , VID: V00  , SN: 9V5WSCW6XB8
+
+NAME: "module R0", DESCR: "Cisco Catalyst 8000V Edge Route Processor"
+PID: C8000V            , VID: V00  , SN: JAB1303001C
+
+NAME: "module F0", DESCR: "Cisco Catalyst 8000V Edge Embedded Services Processor"
+PID: C8000V            , VID:      , SN:            
+
+
+R1#
++++ R1 with alias 'cli': executing command 'show issu rollback-timer' +++
+show issu rollback-timer
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Rollback: inactive, no ISSU operation is in progress
+
+R1#
++++ R1 with alias 'cli': executing command 'show platform' +++
+show platform
+Chassis type: C8000V
+
+Slot      Type                State                 Insert time (ago) 
+--------- ------------------- --------------------- ----------------- 
+R0        C8000V              ok, active            00:08:43      
+F0        C8000V              ok, active            00:08:43      
+
+R1#
++++ R1 with alias 'cli': executing command 'show issu state detail' +++
+show issu state detail
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Current ISSU Status: Disabled       
+Previous ISSU Operation: N/A        
+=======================================================
+System Check                        Status
+-------------------------------------------------------
+Platform ISSU Support               No
+Standby Online                      No
+Autoboot Enabled                    No
+SSO Mode                            No
+Install Boot                        Yes
+Valid Boot Media                    Yes
+Operational Mode                    NONE
+=======================================================
+No ISSU operation is in progress
+
+R1#
++====================================================================================================================================================+
+| Commands for learning feature 'Platform'                                                                                                           |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowVersion'>                                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.Dir'>                                                                                         |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowRedundancy'>                                                                              |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowInventory'>                                                                               |
+|   cmd: <class 'genie.libs.parser.iosxe.show_issu.ShowIssuRollbackTimer'>                                                                           |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowPlatform'>                                                                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_issu.ShowIssuStateDetail'>                                                                             |
+|====================================================================================================================================================|

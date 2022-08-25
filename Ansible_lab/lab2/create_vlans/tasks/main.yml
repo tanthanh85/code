@@ -1,0 +1,10 @@
+---
+# tasks file for create_vlans
+- name: Create vlan vlans from a vlan list
+  nxos_vlans:
+    config:
+      - vlan_id: '{{item.id}}'
+        name: '{{item.name}}'
+        enabled: True
+    state: merged
+  with_items: '{{vlan_list}}'
